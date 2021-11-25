@@ -1,4 +1,6 @@
 <?php
+    get_template_part('/inc/plantex-plugins');
+
     function plantex_theme_setup() {
         load_theme_textdomain('plantex');
 
