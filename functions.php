@@ -11,6 +11,10 @@
         add_theme_support( 'widgets' );
         add_theme_support( 'post-thumbnails' );
         add_theme_support( 'post-formats', array('aside', 'image', 'gallery', 'audio', 'video', 'quote', 'link', 'chat') );
+
+        register_nav_menus(array(
+            'primary-menu'          =>  __('Primary Menu', 'plantex'),
+        ));
     }
     add_action('after_setup_theme', 'plantex_theme_setup');
 
@@ -25,3 +29,11 @@
         wp_enqueue_script('main-js', get_template_directory_uri().'/assets/js/main.js', null, time(), true);
     }
     add_action( 'wp_enqueue_scripts', 'plantex_assets_enqueue' );
+
+    // Codestar Data Transmission
+    if ( ! function_exists( 'plantex_get_option' ) ) {
+        function plantex_get_option( $option = '', $default = null ) {
+          $options = get_option( 'plantex_options' );
+          return ( isset( $options[$option] ) ) ? $options[$option] : $default;
+        }
+    }

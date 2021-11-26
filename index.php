@@ -1,73 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Responsive plants website - Bedimcode</title>
-
-    <?php wp_head(); ?>
-</head>
-<body>
-    <!--==================== HEADER ====================-->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo">
-                <i class="ri-leaf-line nav__logo-icon"></i> Plantex
-            </a>
-
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link active-link">Home</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">About</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#products" class="nav__link">Products</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#faqs" class="nav__link">FAQs</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">Contact Us</a>
-                    </li>
-                </ul>
-
-                <div class="nav__close" id="nav-close">
-                    <i class="ri-close-line"></i>
-                </div>
-            </div>
-
-            <div class="nav__btns">
-                <!-- Theme change button -->
-                <i class="ri-moon-line change-theme" id="theme-button"></i>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="ri-menu-line"></i>
-                </div>
-            </div>
-        </nav>
-    </header>
+<?php
+    get_header();
+?>
 
     <main class="main">
         <!--==================== HOME ====================-->
         <section class="home" id="home">
             <div class="home__container container grid">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/home.png" alt="" class="home__img">
+                <img src="<?php echo plantex_get_option('hero_featured_image')['url']; ?>" alt="" class="home__img">
 
                 <div class="home__data">
                     <h1 class="home__title">
-                        Plants will make <br> your life better
+                        <?php echo plantex_get_option('hero_title'); ?>
                     </h1>
                     <p class="home__description">
-                        Create incredible plant design for your offices or apastaments. 
-                        Add fresness to your new ideas.
+                        <?php echo plantex_get_option('hero_description'); ?>
                     </p>
-                    <a href="#about" class="button button--flex">
-                        Explore <i class="ri-arrow-right-down-line button__icon"></i>
+                    <?php if(plantex_get_option('is_show_hero_button')) : ?>
+                    <a href="<?php echo plantex_get_option('button_link'); ?>" class="button button--flex">
+                        <?php echo plantex_get_option('hero_button_label'); ?> <i class="ri-arrow-right-down-line button__icon"></i>
                     </a>
+                    <?php endif; ?>
                 </div>
 
                 <div class="home__social">
@@ -419,80 +371,5 @@
         </section>
     </main>
 
-    <!--==================== FOOTER ====================-->
-    <footer class="footer section">
-        <div class="footer__container container grid">
-            <div class="footer__content">
-                <a href="#" class="footer__logo">
-                    <i class="ri-leaf-line footer__logo-icon"></i> Plantex
-                </a>
-
-                <h3 class="footer__title">
-                    Subscribe to our newsletter <br> to stay update
-                </h3>
-
-                <div class="footer__subscribe">
-                    <input type="email" placeholder="Enter your email" class="footer__input">
-
-                    <button class="button button--flex footer__button">
-                        Subscribe
-                        <i class="ri-arrow-right-up-line button__icon"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="footer__content">
-                <h3 class="footer__title">Our Address</h3>
-
-                <ul class="footer__data">
-                    <li class="footer__information">1234 - Peru</li>
-                    <li class="footer__information">La Libertad - 43210</li>
-                    <li class="footer__information">123-456-789</li>
-                </ul>
-            </div>
-
-            <div class="footer__content">
-                <h3 class="footer__title">Contact Us</h3>
-
-                <ul class="footer__data">
-                    <li class="footer__information">+999 888 777</li>
-                    
-                    <div class="footer__social">
-                        <a href="https://www.facebook.com/" class="footer__social-link">
-                            <i class="ri-facebook-fill"></i>
-                        </a>
-                        <a href="https://www.instagram.com/" class="footer__social-link">
-                            <i class="ri-instagram-line"></i>
-                        </a>
-                        <a href="https://twitter.com/" class="footer__social-link">
-                            <i class="ri-twitter-fill"></i>
-                        </a>
-                    </div>
-                </ul>
-            </div>
-
-            <div class="footer__content">
-                <h3 class="footer__title">
-                    We accept all credit cards
-                </h3>
-
-                <div class="footer__cards">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/card1.png" alt="" class="footer__card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/card2.png" alt="" class="footer__card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/card3.png" alt="" class="footer__card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/card4.png" alt="" class="footer__card">
-                </div>
-            </div>
-        </div>
-
-        <p class="footer__copy">&#169; Bedimcode. All rigths reserved</p>
-    </footer>
-    
-    <!--=============== SCROLL UP ===============-->
-    <a href="#" class="scrollup" id="scroll-up"> 
-        <i class="ri-arrow-up-fill scrollup__icon"></i>
-    </a>
-
-    <?php wp_footer(); ?>
-</body>
-</html>
+<?php
+    get_footer();

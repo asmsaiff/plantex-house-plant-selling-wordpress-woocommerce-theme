@@ -262,13 +262,13 @@ the website, in dark theme
   row-gap: 1.5rem;
 }
 
-.nav__link{
+.nav__item a{
   color: var(--title-color);
   font-weight: var(--font-medium);
   transition: .3s;
 }
 
-.nav__link:hover{
+.nav__item a:hover{
   color: var(--first-color);
 }
 
@@ -283,12 +283,12 @@ the website, in dark theme
 }
 
 /* Active link */
-.active-link{
+.active-link a{
   position: relative;
   color: var(--first-color);
 }
 
-.active-link::after{
+.active-link a::after{
   content: '';
   position: absolute;
   bottom: -.5rem;
