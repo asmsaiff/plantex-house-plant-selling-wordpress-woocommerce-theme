@@ -1,11 +1,11 @@
 <?php
     CSF::createSection($option_prefix, array(
-        'title'         =>  __('Page', 'plantex'),
-        'id'            =>  'page'
+        'title'         =>  __('Home Page', 'plantex'),
+        'id'            =>  'home_page'
     ));
 
     CSF::createSection($option_prefix, array(
-        'parent'        =>  'page',
+        'parent'        =>  'home_page',
         'title'         =>  __('Hero Section', 'plantex'),
         'fields'        =>  array(
             array(
