@@ -5,6 +5,7 @@
         CSF::createOptions( $option_prefix, array(
             'menu_title' => 'Plantex Options',
             'menu_slug'  => 'plantex-options',
+            'menu_icon'     =>  'dashicons-screenoptions'
         ));
 
         CSF::createSection( $option_prefix, array(
