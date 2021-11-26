@@ -73,40 +73,39 @@
         <!--==================== ABOUT ====================-->
         <section class="about section container" id="about">
             <div class="about__container grid">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about.png" alt="" class="about__img">
+                <img src="<?php echo plantex_get_option('about_section_featured_image')['url']; ?>" alt="" class="about__img">
 
                 <div class="about__data">
                     <h2 class="section__title about__title">
-                        Who we really are & <br> why choose us
+                        <?php echo plantex_get_option('about_section_title'); ?>
                     </h2>
 
                     <p class="about__description">
-                        We have over 4000+ unbiased reviews and our customers 
-                        trust our plant process and delivery service every time
+                        <?php echo plantex_get_option('about_section_description'); ?>
                     </p>
 
                     <div class="about__details">
+                        <?php
+                            $about_section_details_lists = plantex_get_option('about_section_details_lists');
+                            for($i = 0; $i < count($about_section_details_lists); $i++) {
+                        ?>
                         <p class="about__details-description">
                             <i class="ri-checkbox-fill about__details-icon"></i>
-                            We always deliver on time.
+                            <?php echo $about_section_details_lists[$i]['about_details_list_item']; ?>
                         </p>
-                        <p class="about__details-description">
-                            <i class="ri-checkbox-fill about__details-icon"></i>
-                            We give you guides to protect and care for your plants.
-                        </p>
-                        <p class="about__details-description">
-                            <i class="ri-checkbox-fill about__details-icon"></i>
-                            We always come over for a check-up after sale.
-                        </p>
-                        <p class="about__details-description">
-                            <i class="ri-checkbox-fill about__details-icon"></i>
-                            100% money back guaranteed.
-                        </p>
+                        <?php
+                            }
+                        ?>
                     </div>
 
-                    <a href="#" class="button--link button--flex">
-                        Shop Now <i class="ri-arrow-right-down-line button__icon"></i>
+                    <?php
+                        if(plantex_get_option('is_show_about_section_button')) :
+                    ?>
+                    <a href="<?php echo plantex_get_option('about_section_button_link'); ?>" class="button--link button--flex">
+                        <?php echo plantex_get_option('about_section_button_label'); ?>
+                        <i class="ri-arrow-right-down-line button__icon"></i>
                     </a>
+                    <?php endif; ?>
                 </div>
             </div>
         </section>
@@ -115,33 +114,25 @@
         <section class="steps section container">
             <div class="steps__bg">
                 <h2 class="section__title-center steps__title">
-                    Steps to start your <br> plants off right
+                    <?php echo plantex_get_option('step_section_title'); ?>
                 </h2>
 
                 <div class="steps__container grid">
-                    <div class="steps__card">
-                        <div class="steps__card-number">01</div>
-                        <h3 class="steps__card-title">Choose Plant</h3>
-                        <p class="steps__card-description">
-                            We have several varieties plants you can choose from.
-                        </p>
-                    </div>
+                    <?php
+                        $steps = plantex_get_option('step_section');
 
+                        for($i = 0; $i < count($steps); $i++) :
+                    ?>
                     <div class="steps__card">
-                        <div class="steps__card-number">02</div>
-                        <h3 class="steps__card-title">Place an order</h3>
+                        <div class="steps__card-number"><?php echo '0' . $i + 1; ?></div>
+                        <h3 class="steps__card-title">
+                            <?php echo $steps[$i]['step_item_title']; ?>
+                        </h3>
                         <p class="steps__card-description">
-                            Once your order is set, we move to the next step which is the shipping.
+                            <?php echo $steps[$i]['step_item_description']; ?>
                         </p>
                     </div>
-
-                    <div class="steps__card">
-                        <div class="steps__card-number">03</div>
-                        <h3 class="steps__card-title">Get plants delivered</h3>
-                        <p class="steps__card-description">
-                            Our delivery process is easy, you receive the plant direct to your door.
-                        </p>
-                    </div>
+                    <?php endfor; ?>
                 </div>
             </div>
         </section>
