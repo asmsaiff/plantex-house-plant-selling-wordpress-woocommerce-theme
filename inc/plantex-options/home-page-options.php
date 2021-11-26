@@ -41,6 +41,11 @@
                 'type'          => 'media',
                 'preview'       => true,
                 'url'           => true
-              ),
+            ),
+            array(
+                'id'            =>  'social_media_follow_title',
+                'title'         =>  __('Title Under Social Media Icons', 'plantex'),
+                'type'          =>  'text',
+            ),
         ),
     ));

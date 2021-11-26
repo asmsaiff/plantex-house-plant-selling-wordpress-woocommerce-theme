@@ -20,4 +20,5 @@
         ));
         
         include_once get_template_directory().'/inc/plantex-options/home-page-options.php';
+        include_once get_template_directory().'/inc/plantex-options/plantex-social-media.php';
     }
