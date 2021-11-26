@@ -6,19 +6,20 @@
         <!--==================== HOME ====================-->
         <section class="home" id="home">
             <div class="home__container container grid">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/home.png" alt="" class="home__img">
+                <img src="<?php echo plantex_get_option('hero_featured_image')['url']; ?>" alt="" class="home__img">
 
                 <div class="home__data">
                     <h1 class="home__title">
-                        Plants will make <br> your life better
+                        <?php echo plantex_get_option('hero_title'); ?>
                     </h1>
                     <p class="home__description">
-                        Create incredible plant design for your offices or apastaments. 
-                        Add fresness to your new ideas.
+                        <?php echo plantex_get_option('hero_description'); ?>
                     </p>
-                    <a href="#about" class="button button--flex">
-                        Explore <i class="ri-arrow-right-down-line button__icon"></i>
+                    <?php if(plantex_get_option('is_show_hero_button')) : ?>
+                    <a href="<?php echo plantex_get_option('button_link'); ?>" class="button button--flex">
+                        <?php echo plantex_get_option('hero_button_label'); ?> <i class="ri-arrow-right-down-line button__icon"></i>
                     </a>
+                    <?php endif; ?>
                 </div>
 
                 <div class="home__social">
