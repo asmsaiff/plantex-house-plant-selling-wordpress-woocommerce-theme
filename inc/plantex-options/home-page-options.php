@@ -141,3 +141,64 @@
             ),
         ),
     ));
+
+    CSF::createSection($option_prefix, array(
+        'title'                 =>  __('Product', 'plantex'),
+        'parent'                =>  'home_page',
+        'fields'                =>  array(
+            array(
+                'title'                 =>  __('Section Title', 'plantex'),
+                'id'                    =>  'product_section_title',
+                'type'                  =>  'wp_editor',
+                'height'                =>  '100px',
+                'media_buttons'         =>  false
+            ),
+            array(
+                'title'                 =>  __('Section Description', 'plantex'),
+                'id'                    =>  'product_section_description',
+                'type'                  =>  'wp_editor',
+                'height'                =>  '100px',
+                'media_buttons'         =>  false
+            ),
+            array(
+                'title'                 =>  __('Product Shortcode', 'plantex'),
+                'id'                    =>  'product_section_shortcode',
+                'type'                  =>  'text',
+            ),
+        ),
+    ));
+
+    CSF::createSection($option_prefix, array(
+        'title'                 =>  __('Question/F.A.Q', 'plantex'),
+        'parent'                =>  'home_page',
+        'fields'                =>  array(
+            array(
+                'title'                 =>  __('Section Title', 'plantex'),
+                'id'                    =>  'faq_section_title',
+                'type'                  =>  'wp_editor',
+                'height'                =>  '100px',
+                'media_buttons'         =>  false
+            ),
+            array(
+                'title'         =>  __('F.A.Q Items', 'plantex'),
+                'id'            =>  'faqs',
+                'type'          =>  'repeater',
+                'min'           =>  1,
+                'max'           =>  6,
+                'fields' => array(
+                    array(
+                        'title'             => __('F.A.Q Title', 'plantex'),
+                        'id'                => 'faq_item_title',
+                        'type'              => 'text',
+                    ),
+                    array(
+                        'title'             =>  __('Section Description', 'plantex'),
+                        'id'                =>  'faq_item_description',
+                        'type'              =>  'wp_editor',
+                        'height'            =>  '100px',
+                        'media_buttons'     =>  false
+                    ),
+                ),
+            ),
+        ),
+    ));

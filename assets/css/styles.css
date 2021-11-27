@@ -560,14 +560,16 @@ the website, in dark theme
   padding: 1.5rem 0;
 }
 
-.questions__group{
-  display: grid;
-  row-gap: 1.5rem;
+.questions__group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
 }
 
 .questions__item{
   background-color: var(--container-color);
   border-radius: .25rem;
+	height: fit-content;
 }
 
 .questions__item-title{
@@ -920,7 +922,6 @@ the website, in dark theme
 
   .home__container,
   .about__container,
-  .questions__container,
   .contact__container,
   .footer__container{
     grid-template-columns: repeat(2, 1fr);
