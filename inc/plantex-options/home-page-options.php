@@ -202,3 +202,42 @@
             ),
         ),
     ));
+
+    CSF::createSection($option_prefix, array(
+        'title'                 =>  __('Contact', 'plantex'),
+        'parent'                =>  'home_page',
+        'fields'                =>  array(
+            array(
+                'title'                 =>  __('Section Title', 'plantex'),
+                'id'                    =>  'contact_section_title',
+                'type'                  =>  'wp_editor',
+                'height'                =>  '100px',
+                'media_buttons'         =>  false
+            ),
+            array(
+                'title'                 =>  __('Call Area Title', 'plantex'),
+                'id'                    =>  'call_area_title',
+                'type'                  =>  'text',
+            ),
+            array(
+                'title'                 =>  __('Phone Number', 'plantex'),
+                'id'                    =>  'phone_number',
+                'type'                  =>  'text',
+            ),
+            array(
+                'title'                 =>  __('Email Area Title', 'plantex'),
+                'id'                    =>  'email_area_title',
+                'type'                  =>  'text',
+            ),
+            array(
+                'title'                 =>  __('Email Address', 'plantex'),
+                'id'                    =>  'email_address',
+                'type'                  =>  'text',
+            ),
+            array(
+                'title'                 =>  __('Contact Form 7 Shortcode', 'plantex'),
+                'id'                    =>  'cf7_shortcode',
+                'type'                  =>  'text',
+            ),
+        ),
+    ));

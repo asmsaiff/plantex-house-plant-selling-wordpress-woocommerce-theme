@@ -2,12 +2,13 @@
 <footer class="footer section">
         <div class="footer__container container grid">
             <div class="footer__content">
-                <a href="#" class="footer__logo">
-                    <i class="ri-leaf-line footer__logo-icon"></i> Plantex
+                <a href="<?php echo home_url(); ?>" class="footer__logo">
+                    <i class="ri-leaf-line footer__logo-icon"></i> 
+                    <?php bloginfo( 'title-tag' ); ?>
                 </a>
 
                 <h3 class="footer__title">
-                    Subscribe to our newsletter <br> to stay update
+                    <?php echo plantex_get_option('newsletter_form_title'); ?>
                 </h3>
 
                 <div class="footer__subscribe">
@@ -21,50 +22,85 @@
             </div>
 
             <div class="footer__content">
-                <h3 class="footer__title">Our Address</h3>
+                <h3 class="footer__title">
+                    <?php echo plantex_get_option('address_area_title'); ?>
+                </h3>
 
-                <ul class="footer__data">
-                    <li class="footer__information">1234 - Peru</li>
-                    <li class="footer__information">La Libertad - 43210</li>
-                    <li class="footer__information">123-456-789</li>
-                </ul>
+                <?php echo plantex_get_option('address'); ?>
             </div>
 
             <div class="footer__content">
-                <h3 class="footer__title">Contact Us</h3>
+                <h3 class="footer__title"><?php echo plantex_get_option('contact_area_title'); ?></h3>
 
                 <ul class="footer__data">
-                    <li class="footer__information">+999 888 777</li>
+                    <li class="footer__information">
+                        <?php echo plantex_get_option('contact_phone_number'); ?>
+                    </li>
                     
                     <div class="footer__social">
-                        <a href="https://www.facebook.com/" class="footer__social-link">
+                        <?php if(plantex_get_option('plantex_facebook')) : ?>
+                        <a href="<?php echo plantex_get_option('plantex_facebook'); ?>" target="_blank" class="footer__social-link">
                             <i class="ri-facebook-fill"></i>
                         </a>
-                        <a href="https://www.instagram.com/" class="footer__social-link">
+                        <?php
+                            endif;
+
+                            if(plantex_get_option('plantex_instagram')) :
+                        ?>
+                        <a href="<?php echo plantex_get_option('plantex_instagram'); ?>" target="_blank" class="footer__social-link">
                             <i class="ri-instagram-line"></i>
                         </a>
-                        <a href="https://twitter.com/" class="footer__social-link">
+                        <?php
+                            endif;
+
+                            if(plantex_get_option('plantex_twitter')) :
+                        ?>
+                        <a href="<?php echo plantex_get_option('plantex_twitter'); ?>" target="_blank" class="footer__social-link">
                             <i class="ri-twitter-fill"></i>
                         </a>
+                        <?php
+                            endif;
+
+                            if(plantex_get_option('plantex_linkedin')) :
+                        ?>
+                        <a href="<?php echo plantex_get_option('plantex_linkedin'); ?>" target="_blank" class="footer__social-link">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                        <?php
+                            endif;
+
+                            if(plantex_get_option('plantex_whatsapp')) :
+                        ?>
+                        <a href="<?php echo plantex_get_option('plantex_whatsapp'); ?>" target="_blank" class="footer__social-link">
+                            <i class="ri-whatsapp-line"></i>
+                        </a>
+                        <?php endif; ?>
                     </div>
                 </ul>
             </div>
 
             <div class="footer__content">
                 <h3 class="footer__title">
-                    We accept all credit cards
+                    <?php echo plantex_get_option('credit_card_area_title'); ?>
                 </h3>
 
                 <div class="footer__cards">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/card1.png" alt="" class="footer__card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/card2.png" alt="" class="footer__card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/card3.png" alt="" class="footer__card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/card4.png" alt="" class="footer__card">
+                    <?php
+                        $card_thumbs = plantex_get_option('card_thumbs');
+
+                        for($i = 0; $i < count($card_thumbs); $i++) :
+                    ?>
+                    <img src="<?php print_r( $card_thumbs[$i]['thumb_img']['url']); ?>" alt="" class="footer__card">
+                    <?php
+                        endfor;
+                    ?>
                 </div>
             </div>
         </div>
 
-        <p class="footer__copy">&#169; Bedimcode. All rigths reserved</p>
+        <p class="footer__copy">
+            <?php echo plantex_get_option('footer_credit'); ?>
+        </p>
     </footer>
     
     <!--=============== SCROLL UP ===============-->
