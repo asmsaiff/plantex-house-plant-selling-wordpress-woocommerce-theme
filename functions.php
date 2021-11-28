@@ -9,6 +9,9 @@
         add_theme_support( 'description' );
         add_theme_support( 'menus' );
         add_theme_support( 'widgets' );
+        add_theme_support( 'custom-header' );
+        add_theme_support( 'custom-background' );
+        add_theme_support( 'custom-logo' );
         add_theme_support( 'post-thumbnails' );
         add_theme_support( 'post-formats', array('aside', 'image', 'gallery', 'audio', 'video', 'quote', 'link', 'chat') );
 
@@ -54,3 +57,14 @@
         
         return $dom->saveHTML();
     });
+
+    function plantex_css() {
+        ?>
+        <style>
+            .page_section {
+                background-image: url(<?php echo header_image(); ?>);
+            }
+        </style>
+        <?php
+    }
+    add_action( 'wp_head', 'plantex_css' );
