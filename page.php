@@ -18,7 +18,6 @@
                         if(has_post_thumbnail()) {
                             the_post_thumbnail( 'large', array('class'=>'blog__img') );
                         }
-
                 ?>
                 <div class="content">
                     <?php
@@ -29,11 +28,6 @@
                 <?php
                         endwhile;
                     endif;
-                ?>
-            </div>
-            <div class="comments">
-                <?php 
-                    comments_template();
                 ?>
             </div>
         </section>
