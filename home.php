@@ -12,7 +12,7 @@
                     Here are some selected plants from our showroom, all are in excellent.
                 </p>
             </div>
-            <div class="blog__container grid">
+            <div class="blog__container grid <?php post_class(); ?>">
                 <?php
                     if(have_posts()) :
                         while(have_posts()) :

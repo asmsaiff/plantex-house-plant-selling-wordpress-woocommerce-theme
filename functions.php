@@ -7,13 +7,17 @@
 
         add_theme_support( 'title-tag' );
         add_theme_support( 'description' );
-        add_theme_support( 'menus' );
         add_theme_support( 'widgets' );
         add_theme_support( 'custom-header' );
         add_theme_support( 'custom-background' );
         add_theme_support( 'custom-logo' );
         add_theme_support( 'post-thumbnails' );
         add_theme_support( 'post-formats', array('aside', 'image', 'gallery', 'audio', 'video', 'quote', 'link', 'chat') );
+
+        add_theme_support( 'automatic-feed-links' );
+        add_theme_support( 'html5' );
+        add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
+        add_theme_support( 'customize-selective-refresh-widgets' );
 
         register_nav_menus(array(
             'primary-menu'          =>  __('Primary Menu', 'plantex'),
