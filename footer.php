@@ -2,23 +2,14 @@
 <footer class="footer section">
         <div class="footer__container container grid">
             <div class="footer__content">
-                <a href="<?php echo home_url(); ?>" class="footer__logo">
+                <a href="<?php echo esc_url(home_url()); ?>" class="footer__logo">
                     <i class="ri-leaf-line footer__logo-icon"></i> 
                     <?php bloginfo( 'title-tag' ); ?>
                 </a>
 
-                <h3 class="footer__title">
-                    <?php echo plantex_get_option('newsletter_form_title'); ?>
-                </h3>
-
-                <div class="footer__subscribe">
-                    <input type="email" placeholder="Enter your email" class="footer__input">
-
-                    <button class="button button--flex footer__button">
-                        Subscribe
-                        <i class="ri-arrow-right-up-line button__icon"></i>
-                    </button>
-                </div>
+                <p class="footer_desc">
+                    <?php echo plantex_get_option('footer_description'); ?>
+                </p>
             </div>
 
             <div class="footer__content">

@@ -4,8 +4,8 @@
         'parent'                =>  'general',
         'fields'                =>  array(
             array(
-                'title'                 =>  __('Newsletter Form Title', 'plantex'),
-                'id'                    =>  'newsletter_form_title',
+                'title'                 =>  __('MC4WP Form Shortcode', 'plantex'),
+                'id'                    =>  'footer_description',
                 'type'                  =>  'wp_editor',
                 'height'                =>  '100px',
                 'media_buttons'         =>  false
@@ -38,7 +38,7 @@
                 'type'                  =>  'text',
             ),
             array(
-                'title'                 =>  __('Card Thumbnails'),
+                'title'                 =>  __('Card Thumbnails', 'plantex'),
                 'id'                    =>  'card_thumbs',
                 'type'                  =>  'repeater',
                 'min'                   =>  1,

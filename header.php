@@ -8,24 +8,24 @@
 
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
+    <?php wp_body_open(); ?>
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="<?php echo home_url(); ?>" class="nav__logo">
+            <a href="<?php echo esc_url(home_url()); ?>" class="nav__logo">
                 <i class="ri-leaf-line nav__logo-icon"></i> <?php bloginfo( 'title' ); ?>
             </a>
 
             <div class="nav__menu" id="nav-menu">
                 <?php
-                    $menu_args = array(
+                    $plantex_main_menu = wp_nav_menu(array(
                         'theme_location'        =>  'primary-menu',
                         'menu_id'               =>  'primary-menu',
                         'menu_class'            =>  'nav__list',
                         'menu_container'        =>  'ul',
                         'echo'                  =>  false
-                    );
-                    $plantex_main_menu = wp_nav_menu($menu_args);
+                    ));
 
                     $plantex_main_menu = str_replace('menu-item', 'menu-item nav__item', $plantex_main_menu);
                     $plantex_main_menu = str_replace('current-menu-item', 'current-menu-item active-link', $plantex_main_menu);
