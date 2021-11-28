@@ -144,6 +144,7 @@ the website, in dark theme
 }
 
 .dark-theme .product__circle,
+.dark-theme .blog__circle,
 .dark-theme .footer__subscribe{
   background-color: var(--container-color);
 }
@@ -181,7 +182,9 @@ the website, in dark theme
 .main{
   overflow: hidden; /*For animation*/
 }
-
+.text-center {
+  text-align: center;
+}
 /*=============== HEADER ===============*/
 .header{
   width: 100%;
@@ -854,6 +857,103 @@ the website, in dark theme
   border-radius: .5rem;
 }
 
+/*=============== Blog ===============*/
+.page_section {
+  padding: 3em 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.blog__container {
+  padding: 3rem 0;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+.blog__card{
+  display: grid;
+  position: relative;
+}
+
+.blog__img{
+  position: relative;
+  width: 100%;
+  justify-self: center;
+  margin-bottom: var(--mb-0-75);
+  transition: .3s;
+}
+
+.blog__title,
+.blog__price{
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+}
+
+.blog__title {
+  margin-bottom: .25rem;
+  width: 88%;
+}
+
+.blog__button{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: var(--first-color);
+  color: #FFF;
+  padding: .25rem;
+  border-radius: .35rem;
+  font-size: 1.15rem;
+}
+
+.blog__button:hover{
+  background-color: var(--first-color-alt);
+}
+
+.blog__circle{
+  width: 90px;
+  height: 90px;
+  background-color: var(--first-color-lighten);
+  border-radius: 50%;
+  position: absolute;
+  top: 18%;
+  left: 5%;
+}
+
+.blog__card:hover .blog__img{
+  transform: translateY(-.5rem);
+}
+.pagination .page-numbers {
+  color: #000;
+  margin: 0 5px;
+}
+.dark-theme .pagination .page-numbers {
+  color: #fff;
+}
+
+.next.page-numbers,
+.prev.page-numbers {
+  background-color: #3e6553;
+  color: #fff !important;
+  padding: 4px 5px 0 5px;
+  margin-left: 3px;
+  border-radius: 100%;
+}
+.page-numbers.current {
+  background-color: #3e6553;
+  color: #fff !important;
+  padding: 4px 5px 0 5px;
+  margin-left: 3px;
+  border-radius: 2px;
+}
+.single__container {
+  margin: 50px 0;
+}
+.comments {
+  margin-top: 30px;
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 320px){
@@ -876,8 +976,11 @@ the website, in dark theme
     padding: 1.5rem;
   }
 
-  .product__container{
+  .product__container {
     grid-template-columns: .6fr;
+    justify-content: center;
+  }
+  .blog__container{
     justify-content: center;
   }
 }
@@ -891,12 +994,16 @@ the website, in dark theme
   .product__description{
     padding: 0 4rem;
   }
-  .product__container{
+  .product__container {
     grid-template-columns: repeat(2, 170px);
     justify-content: center;
     column-gap: 5rem;
   }
-
+  .blog__container {
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      column-gap: 2rem;
+  }
   .footer__subscribe{
     width: 400px;
   }
@@ -998,19 +1105,29 @@ the website, in dark theme
   .product__description{
     padding: 0 16rem;
   }
-  .product__container{
+  .product__container {
     padding: 4rem 0;
     grid-template-columns: repeat(3, 185px);
     gap: 4rem 6rem;
   }
+  .blog__container {
+    padding: 4rem 0;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+  }
   .product__img{
     width: 160px;
   }
-  .product__circle{
+  .blog__img {
+    width: 100%;
+  }
+  .product__circle,
+  .blog__circle {
     width: 110px;
     height: 110px;
   }
   .product__title,
+  .blog__title,
   .product__price{
     font-size: var(--normal-font-size);
   }
