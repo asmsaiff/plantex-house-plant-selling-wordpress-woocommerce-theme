@@ -1183,3 +1183,53 @@ the website, in dark theme
     right: 3rem;
   }
 }
+
+
+
+
+
+/* Custom CSS */
+.comment-form p.comment-form-comment label {
+  display: block;
+  margin-top: 20px;
+}
+.wpcd-value-div .textarea-comment {
+  display: block;
+  width: 100%;
+  padding: 5px 5px 0 10px;
+}
+
+.wpcd-template-2 .wpcd-form-submit input[type="submit"] {
+  display: inline-block;
+  background-color: var(--first-color) !important;
+  color: #FFF;
+  border-radius: .5rem;
+  font-weight: var(--font-medium);
+  transition: .3s;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  outline: none;
+  cursor: pointer;
+  border: 2px solid var(--first-color) !important;
+}
+
+.wpcd-template-2 .wpcd-form-submit input[type="submit"]:hover {
+  background-color: var(--first-color-alt) !important;
+  color: #fff !important;
+}
+
+.dark-theme .wpcd-comment-template-2 .wpcd-author-name,
+.dark-theme p.logged-in-as a,
+.dark-theme a {
+  color: #fff;
+}
+
+.wpcd-template-11 .wpcd-text, .wpcd-template-11 .wpcd-url, .wpcd-template-8 .wpcd-text, .wpcd-template-8 .wpcd-url, .wpcd-template-2 .wpcd-text, .wpcd-template-2 .wpcd-url, .wpcd-template-1 .wpcd-text, .wpcd-template-1 .wpcd-url {
+	width: 49% !important;
+	margin-right: 13px !important;
+}
+
+.wpcd-template-2 .wpcd-email {
+  width: 49% !important;
+}
