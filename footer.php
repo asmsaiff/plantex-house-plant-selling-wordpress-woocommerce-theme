@@ -79,7 +79,7 @@
                     <?php
                         $card_thumbs = plantex_get_option('card_thumbs');
 
-                        for($i = 0; $i < count($card_thumbs); $i++) :
+                        for($i = 0; $i < is_array(count($card_thumbs)); $i++) :
                     ?>
                     <img src="<?php print_r( $card_thumbs[$i]['thumb_img']['url']); ?>" alt="" class="footer__card">
                     <?php

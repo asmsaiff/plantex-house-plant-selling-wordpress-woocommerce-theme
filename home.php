@@ -6,10 +6,10 @@
         <section class="blog section container" id="blogs">
             <div class="page_section">
                 <h2 class="text-center">
-                    Blog
+                    <?php _e('Blog', 'plantex'); ?>
                 </h2>
                 <p class="text-center">
-                    Here are some selected plants from our showroom, all are in excellent.
+                    <?php _e('See latest articles about plants', 'plantex'); ?>
                 </p>
             </div>
             <div class="blog__container grid <?php post_class(); ?>">
