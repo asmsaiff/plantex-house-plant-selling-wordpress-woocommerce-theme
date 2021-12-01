@@ -13,14 +13,16 @@
         add_theme_support( 'custom-background' );
         add_theme_support( 'custom-logo' );
         add_theme_support( 'post-thumbnails' );
-        add_theme_support( 'post-formats', array('aside', 'image', 'gallery', 'audio', 'video', 'quote', 'link', 'chat') );
 
         add_theme_support( 'automatic-feed-links' );
         add_theme_support( 'html5' );
         add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
         add_theme_support( 'customize-selective-refresh-widgets' );
 
-        add_theme_support('woocommerce');
+        add_theme_support( 'woocommerce' );
+        add_theme_support( 'wc-product-gallery-zoom' );
+        add_theme_support( 'wc-product-gallery-lightbox' );
+        add_theme_support( 'wc-product-gallery-slider' );
 
         register_nav_menus(array(
             'primary-menu'          =>  __('Primary Menu', 'plantex'),
