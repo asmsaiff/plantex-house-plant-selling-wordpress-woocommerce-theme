@@ -87,7 +87,9 @@
                     <div class="about__details">
                         <?php
                             $about_section_details_lists = plantex_get_option('about_section_details_lists');
-                            for($i = 0; $i < count($about_section_details_lists); $i++) {
+                            $count = count((array)$about_section_details_lists);
+
+                            for($i = 0; $i < $count; $i++) {
                         ?>
                         <p class="about__details-description">
                             <i class="ri-checkbox-fill about__details-icon"></i>
@@ -120,11 +122,12 @@
                 <div class="steps__container grid">
                     <?php
                         $steps = plantex_get_option('step_section');
+                        $step_count = count((array)$steps);
 
-                        for($i = 0; $i < count($steps); $i++) :
+                        for($i = 0; $i < $step_count; $i++) :
                     ?>
                     <div class="steps__card">
-                        <div class="steps__card-number"><?php echo '0' . $i + 1; ?></div>
+                        <div class="steps__card-number"><?php echo '0'; echo $i + 1; ?></div>
                         <h3 class="steps__card-title">
                             <?php echo $steps[$i]['step_item_title']; ?>
                         </h3>
