@@ -1,5 +1,6 @@
 <?php
     get_template_part('/inc/plantex-plugins');
+    get_template_part('/inc/woo');
     get_template_part('/inc/plantex-options/codestar-config');
 
     function plantex_theme_setup() {
@@ -74,10 +75,3 @@
         <?php
     }
     add_action( 'wp_head', 'plantex_css' );
-
-
-
-
-    // WooCommerce
-    add_filter('wp_calculate_image_sizes', '__return_empty_array');
-    add_filter('wp_calculate_image_srcset', '__return_empty_array');
