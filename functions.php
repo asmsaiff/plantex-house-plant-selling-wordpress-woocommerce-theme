@@ -19,6 +19,8 @@
         add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
         add_theme_support( 'customize-selective-refresh-widgets' );
 
+        add_theme_support('woocommerce');
+
         register_nav_menus(array(
             'primary-menu'          =>  __('Primary Menu', 'plantex'),
         ));
@@ -72,3 +74,10 @@
         <?php
     }
     add_action( 'wp_head', 'plantex_css' );
+
+
+
+
+    // WooCommerce
+    add_filter('wp_calculate_image_sizes', '__return_empty_array');
+    add_filter('wp_calculate_image_srcset', '__return_empty_array');

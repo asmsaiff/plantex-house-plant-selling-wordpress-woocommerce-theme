@@ -226,6 +226,8 @@
                     </button>
                 </article>
             </div>
+
+            <?php echo do_shortcode(plantex_get_option('product_section_shortcode')); ?>
         </section>
 
         <!--==================== QUESTIONS ====================-->
