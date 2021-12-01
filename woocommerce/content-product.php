@@ -24,8 +24,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<li <?php wc_product_class( '', $product ); ?>>
-	<?php
+<?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.
 	 *
@@ -63,5 +62,4 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 * @hooked woocommerce_template_loop_add_to_cart - 10
 	 */
 	do_action( 'woocommerce_after_shop_loop_item' );
-	?>
-</li>
+?>
