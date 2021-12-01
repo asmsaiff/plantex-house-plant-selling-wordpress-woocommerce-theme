@@ -1,5 +1,6 @@
 <?php
     get_template_part('/inc/plantex-plugins');
+    get_template_part('/inc/woo');
     get_template_part('/inc/plantex-options/codestar-config');
 
     function plantex_theme_setup() {
@@ -18,6 +19,8 @@
         add_theme_support( 'html5' );
         add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
         add_theme_support( 'customize-selective-refresh-widgets' );
+
+        add_theme_support('woocommerce');
 
         register_nav_menus(array(
             'primary-menu'          =>  __('Primary Menu', 'plantex'),

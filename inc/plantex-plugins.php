@@ -31,7 +31,7 @@
  * Plugin:
  * require_once dirname( __FILE__ ) . '/path/to/class-tgm-plugin-activation.php';
  */
-get_template_directory() . '/lib/class-tgm-plugin-activation.php';
+require_once(get_template_directory().'/lib/class-tgm-plugin-activation.php');
 
 add_action( 'tgmpa_register', 'plantex_register_required_plugins' );
 
@@ -75,6 +75,28 @@ function plantex_register_required_plugins() {
 		array(
 			'name'               => 'Contact Form 7', // The plugin name.
 			'slug'               => 'contact-form-7', // The plugin slug (typically the folder name).
+			'source'             => '', // The plugin source.
+			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
+		),
+		array(
+			'name'               => 'WooCommerce', // The plugin name.
+			'slug'               => 'woocommerce', // The plugin slug (typically the folder name).
+			'source'             => '', // The plugin source.
+			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
+		),
+		array(
+			'name'               => 'Comment Designer', // The plugin name.
+			'slug'               => 'wp-comment-designer-lite', // The plugin slug (typically the folder name).
 			'source'             => '', // The plugin source.
 			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
 			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
