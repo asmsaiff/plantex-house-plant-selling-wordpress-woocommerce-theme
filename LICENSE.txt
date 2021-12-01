@@ -1,11 +1,14 @@
-Plantex Theme by Mamurjor
+Plantex Theme by Saifullah
 =========================
 
-> Copyright (C) Mamurjor IT
-> http://www.mamurjor.com
+== Copyright ==
 
-Plantex is a WordPress theme and website builder created by Mamurjor. This
-software is released under the The GNU General Public License, Version 2. Plantex
+Plantex WordPress Theme, 2021 saifullah.co
+Plantex is distributed under the terms of the GNU GPL.
+
+-------
+Plantex is a WordPress theme and website builder created by Saifullah. This
+theme is released under the The GNU General Public License, Version 2. Plantex
 makes use of third party open source code from several different sources. Where
 possible, this code has been clearly labeled and associated copyright and license
 information has been included in the files themselves. You can also refer to 

@@ -18,8 +18,7 @@ Take it for a spin! See how Plantex elevates your portfolio, ecommerce, business
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
 2. Type in Plantex in the search form and press the 'Enter' key on your keyboard.
 3. Click on the 'Activate' button to use your new theme right away.
-4. Go to INSERT ABOUT PAGE for a guide on how to customize this theme.
-5. Navigate to Plantex Options in WordPress admin area customize to your taste.
+4. Navigate to 'Plantex Options' in WordPress admin area customize to your taste. You can add contents on page from the advanced option panel there.
 
 == Privacy ==
 Plantex uses LocalStorage to save the setting when Dark Mode support is turned on or off.
@@ -28,7 +27,7 @@ No data is saved in the database or transferred.
 
 == Copyright ==
 
-Plantex WordPress Theme, 2020-2021 WordPress.org
+Plantex WordPress Theme, 2020-2021 saifullah.co
 Plantex is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
@@ -42,11 +41,4 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 
-Plantex is derived from Mamurjor, (C) 2020 Mamurjor IT.
-
-Plantex is also based on:
-
-This theme bundles the following third-party resources:
-
-Images
-https://www.pexels.com
+Plantex is derived from Saifullah, (C) 2020.
