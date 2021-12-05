@@ -15,7 +15,7 @@
                 array(
                     'id'        => 'op',
                     'type'      => 'text',
-                    'title'     => 'Some Options Will Go Here',
+                    'title'     => __('Some Options Will Go Here', 'plantex'),
                 ),
             )
         ));
