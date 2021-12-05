@@ -3,13 +3,13 @@
         $option_prefix = 'plantex_options';
 
         CSF::createOptions( $option_prefix, array(
-            'menu_title'    => 'Plantex Options',
+            'menu_title'    => __('Plantex Options', 'plantex'),
             'menu_slug'     => 'plantex-options',
             'menu_icon'     =>  'dashicons-screenoptions'
         ));
 
         CSF::createSection( $option_prefix, array(
-            'title'     => 'General',
+            'title'     => __('General', 'plantex'),
             'id'        =>  'general',
             'fields'    => array(
                 array(
