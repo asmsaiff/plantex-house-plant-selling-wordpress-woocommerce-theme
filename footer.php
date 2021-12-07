@@ -30,7 +30,7 @@
                     
                     <div class="footer__social">
                         <?php if(plantex_get_option('plantex_facebook')) : ?>
-                        <a href="<?php echo plantex_get_option('plantex_facebook'); ?>" target="_blank" class="footer__social-link">
+                        <a href="<?php echo plantex_get_option('plantex_facebook'); ?>"  class="footer__social-link">
                             <i class="ri-facebook-fill"></i>
                         </a>
                         <?php
@@ -38,7 +38,7 @@
 
                             if(plantex_get_option('plantex_instagram')) :
                         ?>
-                        <a href="<?php echo plantex_get_option('plantex_instagram'); ?>" target="_blank" class="footer__social-link">
+                        <a href="<?php echo plantex_get_option('plantex_instagram'); ?>"  class="footer__social-link">
                             <i class="ri-instagram-line"></i>
                         </a>
                         <?php
@@ -46,7 +46,7 @@
 
                             if(plantex_get_option('plantex_twitter')) :
                         ?>
-                        <a href="<?php echo plantex_get_option('plantex_twitter'); ?>" target="_blank" class="footer__social-link">
+                        <a href="<?php echo plantex_get_option('plantex_twitter'); ?>"  class="footer__social-link">
                             <i class="ri-twitter-fill"></i>
                         </a>
                         <?php
@@ -54,7 +54,7 @@
 
                             if(plantex_get_option('plantex_linkedin')) :
                         ?>
-                        <a href="<?php echo plantex_get_option('plantex_linkedin'); ?>" target="_blank" class="footer__social-link">
+                        <a href="<?php echo plantex_get_option('plantex_linkedin'); ?>"  class="footer__social-link">
                             <i class="ri-linkedin-fill"></i>
                         </a>
                         <?php
@@ -62,7 +62,7 @@
 
                             if(plantex_get_option('plantex_whatsapp')) :
                         ?>
-                        <a href="<?php echo plantex_get_option('plantex_whatsapp'); ?>" target="_blank" class="footer__social-link">
+                        <a href="<?php echo plantex_get_option('plantex_whatsapp'); ?>"  class="footer__social-link">
                             <i class="ri-whatsapp-line"></i>
                         </a>
                         <?php endif; ?>
@@ -82,7 +82,7 @@
 
                         for($i = 0; $i < $thumbs_count; $i++) :
                     ?>
-                    <img src="<?php print_r( $card_thumbs[$i]['thumb_img']['url']); ?>" alt="" class="footer__card">
+                    <img src="<?php echo $card_thumbs[$i]['thumb_img']['url']; ?>" alt="" class="footer__card">
                     <?php
                         endfor;
                     ?>
