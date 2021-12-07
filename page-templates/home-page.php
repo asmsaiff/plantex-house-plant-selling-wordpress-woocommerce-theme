@@ -32,7 +32,7 @@
 
                     <div class="home__social-links">
                         <?php if(plantex_get_option('plantex_facebook')) : ?>
-                        <a href="<?php echo plantex_get_option('plantex_facebook'); ?>" target="_blank" class="home__social-link">
+                        <a href="<?php echo plantex_get_option('plantex_facebook'); ?>"  class="home__social-link">
                             <i class="ri-facebook-fill"></i>
                         </a>
                         <?php
@@ -40,7 +40,7 @@
 
                             if(plantex_get_option('plantex_instagram')) :
                         ?>
-                        <a href="<?php echo plantex_get_option('plantex_instagram'); ?>" target="_blank" class="home__social-link">
+                        <a href="<?php echo plantex_get_option('plantex_instagram'); ?>"  class="home__social-link">
                             <i class="ri-instagram-line"></i>
                         </a>
                         <?php
@@ -48,7 +48,7 @@
 
                             if(plantex_get_option('plantex_twitter')) :
                         ?>
-                        <a href="<?php echo plantex_get_option('plantex_twitter'); ?>" target="_blank" class="home__social-link">
+                        <a href="<?php echo plantex_get_option('plantex_twitter'); ?>"  class="home__social-link">
                             <i class="ri-twitter-fill"></i>
                         </a>
                         <?php
@@ -56,7 +56,7 @@
 
                             if(plantex_get_option('plantex_linkedin')) :
                         ?>
-                        <a href="<?php echo plantex_get_option('plantex_linkedin'); ?>" target="_blank" class="home__social-link">
+                        <a href="<?php echo plantex_get_option('plantex_linkedin'); ?>"  class="home__social-link">
                             <i class="ri-linkedin-fill"></i>
                         </a>
                         <?php
@@ -64,7 +64,7 @@
 
                             if(plantex_get_option('plantex_whatsapp')) :
                         ?>
-                        <a href="<?php echo plantex_get_option('plantex_whatsapp'); ?>" target="_blank" class="home__social-link">
+                        <a href="<?php echo plantex_get_option('plantex_whatsapp'); ?>"  class="home__social-link">
                             <i class="ri-whatsapp-line"></i>
                         </a>
                         <?php endif; ?>
