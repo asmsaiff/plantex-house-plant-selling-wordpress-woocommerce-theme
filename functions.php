@@ -1,7 +1,6 @@
 <?php
     get_template_part('/inc/plantex-plugins');
     get_template_part('/inc/woo');
-    get_template_part('/lib/codestar-framework/codestar-framework');
     get_template_part('/inc/plantex-options/codestar-config');
 
     function plantex_theme_setup() {
