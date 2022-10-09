@@ -17,7 +17,7 @@
     add_action( 'woocommerce_before_shop_loop_item', 'plantex_before_shop_loop_item');
 
     function loop_product_custom_thumbnail() {
-        echo the_post_thumbnail('thumbnail', array('class' => 'product__img'));
+        echo the_post_thumbnail('large', array('class' => 'product__img'));
     }
     remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
     add_action( 'woocommerce_before_shop_loop_item_title', 'loop_product_custom_thumbnail', 10 );
